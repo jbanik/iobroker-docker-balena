@@ -1,0 +1,14 @@
+version: '2.1'
+
+volumes:
+  iobrokerdata:
+
+services:
+  iobroker:
+    restart: always
+    image: buanet/iobroker:latest
+    container_name: iobroker
+    hostname: iobroker
+    network_mode: host
+    volumes:
+      - iobrokerdata:/opt/iobroker
